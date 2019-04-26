@@ -206,11 +206,71 @@ body {
 /* skills */
 .skills{
     width: 100%;
-    height: 50vh;
+    /* height: 50vh; */
     background-image: url('../img/image1.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    overflow: hidden;
+}
+.skills .opacity {
+    width: 100%;
+    height: 100%;
+    background: rgba(1,22,39,.6);
+}
+
+.skills .skill-container{
+    align-items: center;
+    color: var(--main-light);
+}
+
+.skills .skill-container h2{
+    text-align: center;
+}
+
+.skills .skill-container .my-skill{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.skills .skill-container .my-skill i{
+    font-size: 3em;
+    margin-bottom: 5px;
+}
+
+.skills .skill-container .my-skill p{
+    font-size: 1.3em;
+}
+
+.skills .skill-container .my-skill .range{
+    width: 100%;
+    height: 20px;
+    background: var(--main-light);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skills .skill-container .my-skill .range .porcent {
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--main-primary);
+}
+
+.range-select {
+    margin-top: 50px;
+}
+
+.range-select:nth-child(1) .range .porcent{
+    width: 90%;
+}
+.range-select:nth-child(2) .range .porcent{
+    width: 95%;
+}
+.range-select:nth-child(3) .range .porcent{
+    width: 95%;
 }
 /* skills */

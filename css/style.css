@@ -274,3 +274,17 @@ body {
     width: 95%;
 }
 /* skills */
+
+/* contact */
+#message{
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 200px;
+    max-height: 300px;
+}
+
+.form .btn {
+    background: var(--main-secondary);
+    color: var(--main-light);
+}
+/* contact */

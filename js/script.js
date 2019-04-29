@@ -13,9 +13,11 @@ let navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
     if (window.scrollY > 150) {
         navbar.style.background = '#011627';
-        arrow.style.opacity = '0'
+        navbar.style.boxShadow = '0px 2px 10px rgba(0,0,0,.5)';
+        arrow.style.opacity = '0';
     } else {
         navbar.style.background = 'transparent';
+        navbar.style.boxShadow = 'none';
         arrow.style.opacity = '1';
     }
 });
@@ -35,6 +37,7 @@ if (width < 720) {
     link1.addEventListener('click', () => {
         --click;
         navigator.style.transform = 'translateX(-280px)';
+        console.log('si es aqui');
     });
     link2.addEventListener('click', () => {
         --click;
@@ -47,6 +50,23 @@ if (width < 720) {
     link4.addEventListener('click', () => {
         --click;
         navigator.style.transform = 'translateX(-280px)';
+    });
+} else {
+    link1.addEventListener('click', () => {
+        ++click;
+        navigator.style.transform = 'translateX(0px)';
+    });
+    link2.addEventListener('click', () => {
+        ++click;
+        navigator.style.transform = 'translateX(0px)';
+    });
+    link3.addEventListener('click', () => {
+        ++click;
+        navigator.style.transform = 'translateX(0px)';
+    });
+    link4.addEventListener('click', () => {
+        ++click;
+        navigator.style.transform = 'translateX(0px)';
     });
 }
 

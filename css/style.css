@@ -245,13 +245,13 @@ body {
 }
 
 .works .card-work:hover{
-    transform: scale(1.2) rotate(-4deg);
+    transform: scale(1.2);
     opacity: .85;
 }
 
 .works .card-work:hover > .button-more{
     opacity: 1;
-    transform: scale(.8) rotate(4deg);
+    transform: scale(.8);
 }
 
 /* works */

@@ -12,7 +12,7 @@ let width = window.innerWidth;
 let navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
     if (window.scrollY > 150) {
-        navbar.style.background = '#011627';
+        navbar.style.background = 'rgba(1,22,39,.9)';
         navbar.style.boxShadow = '0px 2px 10px rgba(0,0,0,.5)';
         arrow.style.opacity = '0';
     } else {

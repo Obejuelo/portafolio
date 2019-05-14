@@ -37,7 +37,6 @@ if (width < 720) {
     link1.addEventListener('click', () => {
         --click;
         navigator.style.transform = 'translateX(-280px)';
-        console.log('si es aqui');
     });
     link2.addEventListener('click', () => {
         --click;
@@ -73,7 +72,7 @@ if (width < 720) {
 
 menuBar.addEventListener('click', () => {
     ++click;
-    console.log(arrow);
+    // console.log(arrow);
     if ((click % 2) != 0) {
         navigator.style.transform = 'translateX(0px)';
     } else {

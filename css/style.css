@@ -159,13 +159,19 @@ body {
 /* about */
 .about {
     width: 100%;
-    height: 50vh;
+    height: 100vh;
     background: var(--main-primary);
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: var(--main-light);
+}
+
+.about .container img{
+    width: 250px;
+    border-radius: 50%;
+    margin-bottom: 20px;
 }
 
 .about .container h2{

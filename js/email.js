@@ -11,21 +11,21 @@ let success = `
                 <div class="alert alert-success" role="alert">
                     Send Success
                 </div>
-            `
+            `;
 
 formContact.addEventListener('submit', (e) => {
     e.preventDefault();
 
     spinner.innerHTML = progress;
 
-    let name = document.getElementById('input-name').value;
-    let email = document.getElementById('input-email').value;
-    let message = document.getElementById('input-message').value;
+    let name = document.getElementById('input-name');
+    let email = document.getElementById('input-email');
+    let message = document.getElementById('input-message');
 
     let params = {
-        "name": name,
-        "email": email,
-        "message": message,
+        "name": name.value,
+        "email": email.value,
+        "message": message.value,
     }
 
     emailjs.send('gmail_service', 'website_template', params)
@@ -38,6 +38,8 @@ formContact.addEventListener('submit', (e) => {
             email.value = '';
             message.value = '';
         }, function (err) {
-            console.log("Send email failed!\r\n Response:\n " + err);
+            spinner.innerHTML = '';
+            alert("Send email failed!\r\n Response:\n " + JSON.stringify(err))
+            // console.log("Send email failed!\r\n Response:\n " + err);
         });
 });

@@ -202,24 +202,27 @@
                 </div>
                 <div class="row justify-content-center my-5">
                     <div class="col-12 col-md-10 col-lg-8">
-                        <form action="" class="form">
+                        <form action="" class="form" id="form-contact">
                             <div class="formg-group mt-2">
-                                <label for="name">Name</label>
-                                <input type="text" class="form-control">
+                                <label for="input-name">Name</label>
+                                <input type="text" id='input-name' class="form-control" required>
                             </div>
                             <div class="formg-group mt-2">
-                                <label for="email">Email</label>
-                                <input type="text" class="form-control">
+                                <label for="input-email">Email</label>
+                                <input type="email" class="form-control" id='input-email' required>
                             </div>
                             <div class="formg-group mt-2">
-                                <label for="message">Message</label>
-                                <textarea name="message" id="message" cols="30" rows="10"
-                                    class="form-control"></textarea>
+                                <label for="input-message">Message</label>
+                                <textarea rows="10" class="form-control" id='input-message' required>
+                                </textarea>
                             </div>
                             <div class="form-group text-center mt-3">
-                                <button class="btn">Send</button>
+                                <button class="btn" id="form-button">Send</button>
                             </div>
                         </form>
+                        <div class="text-center" id="spinner">
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -239,6 +242,13 @@
         <!-- <div style="height: 1000px"></div> -->
     </div>
     <script src="./js/script.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_obvQ6dNAOEWPpExJDKsTW");
+        })();
+    </script>
+    <script src="./js/email.js"></script>
 </body>
 
 </html>

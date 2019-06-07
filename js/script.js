@@ -25,50 +25,55 @@ window.addEventListener('scroll', () => {
 // Function menu bar
 window.addEventListener('resize', (e) => {
     width = window.innerWidth;
+    translate()
+});
+
+translate()
+
+function translate() {
     if (width >= 720) {
         navigator.style.transform = 'translateX(0px)';
     } else {
         navigator.style.transform = 'translateX(-280px)';
     }
-});
 
-if (width < 720) {
-    click = 0;
-    link1.addEventListener('click', () => {
-        --click;
-        navigator.style.transform = 'translateX(-280px)';
-    });
-    link2.addEventListener('click', () => {
-        --click;
-        navigator.style.transform = 'translateX(-280px)';
-    });
-    link3.addEventListener('click', () => {
-        --click;
-        navigator.style.transform = 'translateX(-280px)';
-    });
-    link4.addEventListener('click', () => {
-        --click;
-        navigator.style.transform = 'translateX(-280px)';
-    });
-} else {
-    link1.addEventListener('click', () => {
-        ++click;
-        navigator.style.transform = 'translateX(0px)';
-    });
-    link2.addEventListener('click', () => {
-        ++click;
-        navigator.style.transform = 'translateX(0px)';
-    });
-    link3.addEventListener('click', () => {
-        ++click;
-        navigator.style.transform = 'translateX(0px)';
-    });
-    link4.addEventListener('click', () => {
-        ++click;
-        navigator.style.transform = 'translateX(0px)';
-    });
+    if (width < 720) {
+        click = 0;
+        link1.addEventListener('click', () => {
+            click = 0;
+            navigator.style.transform = 'translateX(-280px)';
+        });
+        link2.addEventListener('click', () => {
+            click = 0;
+            navigator.style.transform = 'translateX(-280px)';
+        });
+        link3.addEventListener('click', () => {
+            click = 0;
+            navigator.style.transform = 'translateX(-280px)';
+        });
+        link4.addEventListener('click', () => {
+            click = 0;
+            navigator.style.transform = 'translateX(-280px)';
+        });
+    } else {
+        link1.addEventListener('click', () => {
+            ++click;
+            navigator.style.transform = 'translateX(0px)';
+        });
+        link2.addEventListener('click', () => {
+            ++click;
+            navigator.style.transform = 'translateX(0px)';
+        });
+        link3.addEventListener('click', () => {
+            ++click;
+            navigator.style.transform = 'translateX(0px)';
+        });
+        link4.addEventListener('click', () => {
+            ++click;
+            navigator.style.transform = 'translateX(0px)';
+        });
+    }
 }
-
 
 menuBar.addEventListener('click', () => {
     ++click;

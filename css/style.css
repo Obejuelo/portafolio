@@ -215,14 +215,18 @@ body {
 }
 
 .works .card-content:nth-child(3) .card-work {
-    background-image: url('../img/movies.jpg');
+    background-image: url('../img/dashboard.jpg');
 }
 
 .works .card-content:nth-child(4) .card-work {
-    background-image: url('../img/lyrics.jpg');
+    background-image: url('../img/movies.jpg');
 }
 
 .works .card-content:nth-child(5) .card-work {
+    background-image: url('../img/lyrics.jpg');
+}
+
+.works .card-content:nth-child(6) .card-work {
     background-image: url('../img/food.jpg');
 }
 
@@ -276,7 +280,7 @@ body {
 }
 
 .works .card-work:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
     /* opacity: .85; */
 }
 

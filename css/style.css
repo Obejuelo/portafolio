@@ -426,6 +426,7 @@ footer {
     background: var(--main-dark);
     color: var(--main-light);
     text-align: center;
+    width: 100%;
 }
 
 footer .social {

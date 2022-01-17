@@ -5,6 +5,7 @@ let link2 = document.getElementById('link-2');
 let link3 = document.getElementById('link-3');
 let link4 = document.getElementById('link-4');
 let arrow = document.getElementById('arrow');
+let year = document.getElementById('copy-year');
 let click = 0;
 let width = window.innerWidth;
 
@@ -27,8 +28,6 @@ window.addEventListener('resize', (e) => {
     width = window.innerWidth;
     translate()
 });
-
-translate()
 
 function translate() {
     if (width >= 720) {
@@ -84,3 +83,11 @@ menuBar.addEventListener('click', () => {
         navigator.style.transform = 'translateX(-280px)';
     }
 });
+
+const getYear = () => {
+    const fullYear = new Date().getFullYear();
+    year.innerText = fullYear;
+}
+
+translate();
+getYear();

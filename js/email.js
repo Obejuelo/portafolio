@@ -28,7 +28,7 @@ formContact.addEventListener('submit', (e) => {
         "message": message.value,
     }
 
-    emailjs.send('gmail_service', 'website_template', params)
+    emailjs.send('service_suomcgj', 'template_i63ftmc', params)
         .then(() => {
             spinner.innerHTML = success;
             setTimeout(() => {

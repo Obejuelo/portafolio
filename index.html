@@ -43,13 +43,14 @@
                 <i class="fas fa-bars"></i>
             </div>
         </nav>
+        <div class="nav-backdrop" id="nav-backdrop"></div>
         <!-- Navigator -->
 
         <!-- Header -->
         <header id="header">
             <div class="header-info">
-                <h2>Looking for a Web Developer?</h2>
-                <p class="subtitle">Hi, I'm Obed, web developer I code beautiful things and I love what I do.</p>
+                <h2>Looking for a Frontend Developer?</h2>
+                <p class="subtitle">Hi, I'm Obed, software engineer, I code beautiful things and I love what I do.</p>
             </div>
             <i class="fas fa-chevron-down" id="arrow"></i>
             <div class="opacity"></div>
@@ -84,10 +85,12 @@
                     <div class="col-12 col-sm-6 col-md-4 card-content">
                         <div class="card-work-content">
                             <div class="card-work">
-                                <h6 class="text-more text-center mb-0">Universidad Nacionalista México</h6>
+                                <h6 class="text-more text-center mb-0">Dashboard App</h6>
+                                <h6 class="text-more text-center mb-0">(analytics, board & chat app)</h6>
+                                <h6 class="text-more text-center mb-0">Dark mode</h6>
                                 <div class="buttons-content">
-                                    <a href="https://www.universidadmexico.edu.mx" target='_blank'
-                                        class="btn btn-sm button-more">Web page</a>
+                                    <a href="https://gitlab.com/Obejuelo/dashboard/-/tree/main" target='_blank'
+                                        class="btn btn-sm button-more">See code</a>
                                 </div>
                                 <div class="opacity"></div>
                             </div>
@@ -100,22 +103,6 @@
                                 <h6 class="text-more text-center">(React)</h6>
                                 <div class="buttons-content">
                                     <a href="https://pedantic-poitras-fa996a.netlify.com/" target='_blank' class="btn btn-sm button-more">Web
-                                        page</a>
-                                    <a href="https://github.com/Obejuelo/unm-react" target='_blank'
-                                        class="btn btn-sm button-more">See code</a>
-                                </div>
-                                <div class="opacity"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-4 card-content">
-                        <div class="card-work-content">
-                            <div class="card-work">
-                                <h6 class="text-more text-center mb-0">Dashboard unm</h6>
-                                <p class="text-center text-more text-white p-0 m-0">(us: correo@gmail.com)</p>
-                                <p class="text-center text-more text-white p-0 m-0">(pw: 12345678)</p>
-                                <div class="buttons-content">
-                                    <a href="https://pedantic-poitras-fa996a.netlify.com/dashboard/galery" target='_blank' class="btn btn-sm button-more">Web
                                         page</a>
                                     <a href="https://github.com/Obejuelo/unm-react" target='_blank'
                                         class="btn btn-sm button-more">See code</a>
@@ -155,6 +142,22 @@
                     <div class="col-12 col-sm-6 col-md-4 card-content">
                         <div class="card-work-content">
                             <div class="card-work">
+                                <h6 class="text-more text-center mb-0">Dashboard unm</h6>
+                                <p class="text-center text-more text-white p-0 m-0">(us: correo@gmail.com)</p>
+                                <p class="text-center text-more text-white p-0 m-0">(pw: 12345678)</p>
+                                <div class="buttons-content">
+                                    <a href="https://pedantic-poitras-fa996a.netlify.com/dashboard/galery" target='_blank' class="btn btn-sm button-more">Web
+                                        page</a>
+                                    <a href="https://github.com/Obejuelo/unm-react" target='_blank'
+                                        class="btn btn-sm button-more">See code</a>
+                                </div>
+                                <div class="opacity"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 card-content">
+                        <div class="card-work-content">
+                            <div class="card-work">
                                 <h6 class="text-more text-center mb-0">Food landing page</h6>
                                 <h6 class="text-more text-center">(React)</h6>
                                 <div class="buttons-content">
@@ -162,6 +165,18 @@
                                         class="btn btn-sm button-more">Web page</a>
                                     <a href="https://github.com/Obejuelo/food-landing-page" target='_blank'
                                         class="btn btn-sm button-more">See code</a>
+                                </div>
+                                <div class="opacity"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 card-content">
+                        <div class="card-work-content">
+                            <div class="card-work">
+                                <h6 class="text-more text-center mb-0">Universidad Nacionalista México</h6>
+                                <div class="buttons-content">
+                                    <a href="https://www.universidadmexico.edu.mx" target='_blank'
+                                        class="btn btn-sm button-more">Web page</a>
                                 </div>
                                 <div class="opacity"></div>
                             </div>
@@ -261,19 +276,40 @@
                         <form action="" class="form" id="form-contact">
                             <div class="formg-group mt-2">
                                 <label for="input-name">Name</label>
-                                <input type="text" id='input-name' class="form-control" required>
+                                <input 
+                                    type="text" 
+                                    id='input-name' 
+                                    class="form-control"
+                                    autocomplete="off"
+                                    placeholder="Type your name"
+                                    required
+                                >
                             </div>
                             <div class="formg-group mt-2">
                                 <label for="input-email">Email</label>
-                                <input type="email" class="form-control" id='input-email' required>
+                                <input 
+                                    type="email" 
+                                    class="form-control" 
+                                    id='input-email' 
+                                    placeholder="name.example.com"
+                                    autocomplete="off"
+                                    required
+                                >
                             </div>
                             <div class="formg-group mt-2">
                                 <label for="input-message">Message</label>
-                                <textarea name="message" id="input-message" class="form-control" cols="30" rows="10"
-                                    required></textarea>
+                                <textarea 
+                                    name="message" 
+                                    id="input-message" 
+                                    class="form-control" 
+                                    placeholder="Type your message"
+                                    cols="30" 
+                                    rows="10"
+                                    required
+                                ></textarea>
                             </div>
                             <div class="form-group text-center mt-3">
-                                <button class="btn" id="form-button">Send</button>
+                                <button class="btn btn-lg" id="form-button" style="width: 250px;">Send</button>
                             </div>
                         </form>
                         <div class="text-center" id="spinner">

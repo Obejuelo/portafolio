@@ -31,6 +31,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 
@@ -38,7 +39,7 @@ body {
 
 .main-container .navigation {
     width: 100%;
-    height: 56px;
+    height: 64px;
     position: fixed;
     display: flex;
     justify-content: space-between;
@@ -100,6 +101,15 @@ body {
     color: var(--main-light);
 }
 
+.main-container .nav-backdrop {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background: rgba(1, 22, 39, 0.2);
+    z-index: 7;
+    display: none
+}
 
 /* Navigation */
 
@@ -207,6 +217,10 @@ body {
 }
 
 .works .card-content:nth-child(1) .card-work {
+    background-image: url('../img/dashboard.png');
+}
+
+.works .card-content:nth-child(7) .card-work {
     background-image: url('../img/unm.jpg');
 }
 
@@ -214,15 +228,15 @@ body {
     background-image: url('../img/unm-react.jpg');
 }
 
-.works .card-content:nth-child(3) .card-work {
+.works .card-content:nth-child(5) .card-work {
     background-image: url('../img/dashboard.jpg');
 }
 
-.works .card-content:nth-child(4) .card-work {
+.works .card-content:nth-child(3) .card-work {
     background-image: url('../img/movies.jpg');
 }
 
-.works .card-content:nth-child(5) .card-work {
+.works .card-content:nth-child(4) .card-work {
     background-image: url('../img/lyrics.jpg');
 }
 
@@ -412,7 +426,7 @@ body {
 }
 
 .form .btn {
-    background: var(--main-secondary);
+    background: var(--link);
     color: var(--main-light);
 }
 
@@ -446,6 +460,7 @@ footer .social a i {
 
 footer .social a:hover {
     transform: translateY(-2px);
+    transition: all .2s;
 }
 
 
@@ -485,7 +500,7 @@ footer .social a:hover {
         background: none;
         box-shadow: none;
         width: 320px;
-        height: 56px;
+        height: 64px;
         padding: 0;
         z-index: 9;
         transform: translateX(0px);
@@ -493,7 +508,7 @@ footer .social a:hover {
     .main-container .navigation .navigator .nav-pills {
         /* display: flex; */
         flex-direction: row;
-        height: 56px;
+        height: 64px;
         align-items: center;
         font-size: 1em;
         text-align: left;

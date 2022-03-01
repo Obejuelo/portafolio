@@ -1,13 +1,11 @@
+const backdrop = document.getElementById('nav-backdrop');
+const navLink = document.getElementsByClassName('nav-link');
 let menuBar = document.getElementById('menu-bar');
 let navigator = document.getElementById('navigator');
-let link1 = document.getElementById('link-1');
-let link2 = document.getElementById('link-2');
-let link3 = document.getElementById('link-3');
-let link4 = document.getElementById('link-4');
 let arrow = document.getElementById('arrow');
 let year = document.getElementById('copy-year');
-let click = 0;
 let width = window.innerWidth;
+let click = 0;
 
 //Function navBar
 let navbar = document.getElementById('navbar');
@@ -30,59 +28,52 @@ window.addEventListener('resize', (e) => {
 });
 
 function translate() {
-    if (width >= 720) {
-        navigator.style.transform = 'translateX(0px)';
-    } else {
-        navigator.style.transform = 'translateX(-280px)';
-    }
-
+    if (width >= 720) navigator.style.transform = 'translateX(0px)';
+    else navigator.style.transform = 'translateX(-280px)';
+    
     if (width < 720) {
         click = 0;
-        link1.addEventListener('click', () => {
-            click = 0;
-            navigator.style.transform = 'translateX(-280px)';
-        });
-        link2.addEventListener('click', () => {
-            click = 0;
-            navigator.style.transform = 'translateX(-280px)';
-        });
-        link3.addEventListener('click', () => {
-            click = 0;
-            navigator.style.transform = 'translateX(-280px)';
-        });
-        link4.addEventListener('click', () => {
-            click = 0;
-            navigator.style.transform = 'translateX(-280px)';
-        });
+        for (let item of navLink) {
+            item.addEventListener('click', () => {
+                onClickLink(true);
+            });
+        }
     } else {
-        link1.addEventListener('click', () => {
-            ++click;
-            navigator.style.transform = 'translateX(0px)';
-        });
-        link2.addEventListener('click', () => {
-            ++click;
-            navigator.style.transform = 'translateX(0px)';
-        });
-        link3.addEventListener('click', () => {
-            ++click;
-            navigator.style.transform = 'translateX(0px)';
-        });
-        link4.addEventListener('click', () => {
-            ++click;
-            navigator.style.transform = 'translateX(0px)';
-        });
+        for (let item of navLink) {
+            item.addEventListener('click', () => {
+                onClickLink();
+            });
+        }
+    }
+}
+
+function onClickLink(isMobile) {
+    backdrop.style.display = 'none';
+
+    if(isMobile) {
+        click = 0;
+        navigator.style.transform = 'translateX(-280px)';
+    } else {
+        ++click;
+        navigator.style.transform = 'translateX(0px)';
     }
 }
 
 menuBar.addEventListener('click', () => {
     ++click;
-    // console.log(arrow);
+    
     if ((click % 2) != 0) {
         navigator.style.transform = 'translateX(0px)';
+        backdrop.style.display = 'block';
     } else {
         navigator.style.transform = 'translateX(-280px)';
+        backdrop.style.display = 'none';
     }
 });
+
+backdrop.addEventListener('click', () => {
+    onClickLink(true);
+})
 
 const getYear = () => {
     const fullYear = new Date().getFullYear();

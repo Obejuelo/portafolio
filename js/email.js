@@ -1,7 +1,6 @@
 // Send message
 let formContact = document.getElementById('form-contact');
 let spinner = document.getElementById('spinner');
-const regExp = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 let progress = `
                 <div class="spinner-border text-info" role="status">
                     <span class="sr-only">Loading...</span>
@@ -40,6 +39,5 @@ formContact.addEventListener('submit', (e) => {
         }, function (err) {
             spinner.innerHTML = '';
             alert("Send email failed!\r\n Response:\n " + JSON.stringify(err))
-            // console.log("Send email failed!\r\n Response:\n " + err);
         });
 });

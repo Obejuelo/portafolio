@@ -224,7 +224,7 @@ body {
     background-image: url('../img/unm.jpg');
 }
 
-.works .card-content:nth-child(2) .card-work {
+.works .card-content:nth-child(3) .card-work {
     background-image: url('../img/unm-react.jpg');
 }
 
@@ -232,7 +232,7 @@ body {
     background-image: url('../img/dashboard.jpg');
 }
 
-.works .card-content:nth-child(3) .card-work {
+.works .card-content:nth-child(2) .card-work {
     background-image: url('../img/movies.jpg');
 }
 
